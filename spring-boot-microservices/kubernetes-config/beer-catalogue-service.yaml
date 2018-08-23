@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Service
+metadata:
+  name: beer-catalog-service-svc
+  labels:
+    app: beer-catalog-service
+spec:
+  type: NodePort
+  ports:
+  - port: 8080
+    nodePort: 30081
+  selector:
+    app: beer-catalog-service
+kind: Deployment
+metadata:
+  name: beer-catalog-service
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: beer-catalog-service
+    spec:
+      containers:
+      - name: beer-catalog-service
+        image: beer-catalog-service:latest
+        ports:
+        - containerPort: 8080

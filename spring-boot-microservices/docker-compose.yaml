@@ -1,0 +1,24 @@
+version: '3'
+services:
+  eureka-service:
+    build: ./eureka-service
+    restart: always
+    expose:
+      - "8761"
+  beer-catalog-service:
+    build: ./beer-catalog-service
+    restart: always
+    expose:
+      - "8080"
+  edge-service:
+    build: ./edge-service
+    restart: always
+    expose:
+      - "8081"
+  client:
+    build: ./client
+    restart: always
+    links: 
+      - eureka-service
+      - beer-catalog-service
+      - edge-service
