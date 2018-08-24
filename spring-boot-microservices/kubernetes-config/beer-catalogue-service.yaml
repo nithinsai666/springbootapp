@@ -23,6 +23,6 @@ spec:
     spec:
       containers:
       - name: beer-catalog-service
-        image: beer-catalog-service:latest
+        image: nithinsai666/beer-catalog-service:V1.0.0
         ports:
         - containerPort: 8080

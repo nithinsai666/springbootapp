@@ -1,4 +1,4 @@
-FROM springboot:latest as beer-catalog-service
+FROM springboot:V1.0.0 as beer-catalog-service
 
 WORKDIR /usr/local/
 RUN mkdir -p beer-catalog-service

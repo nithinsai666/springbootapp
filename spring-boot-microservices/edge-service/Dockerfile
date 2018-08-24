@@ -1,4 +1,4 @@
-FROM springboot:latest as edge-service
+FROM springboot:V1.0.0 as edge-service
 
 WORKDIR /usr/local/
 RUN mkdir -p edge-service

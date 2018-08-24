@@ -23,6 +23,6 @@ spec:
     spec:
       containers:
       - name: eureka-service
-        image: eureka-service:latest
+        image: nithinsai666/eureka-service:V1.0.0
         ports:
         - containerPort: 8761

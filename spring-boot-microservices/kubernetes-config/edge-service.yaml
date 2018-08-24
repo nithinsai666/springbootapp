@@ -23,6 +23,6 @@ spec:
     spec:
       containers:
       - name: edge-service
-        image: edge-service:latest
+        image: nithinsai666/edge-service:V1.0.0
         ports:
         - containerPort: 8081

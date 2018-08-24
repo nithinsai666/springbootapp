@@ -1,4 +1,4 @@
-FROM springboot:latest as Angular-client
+FROM springboot:V1.0.0 as Angular-client
 
 WORKDIR /usr/local/
 RUN mkdir -p client

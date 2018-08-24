@@ -1,4 +1,4 @@
-FROM springboot:latest as eureka-service
+FROM springboot:V1.0.0 as eureka-service
 
 WORKDIR /usr/local/
 RUN mkdir -p eureka-service
